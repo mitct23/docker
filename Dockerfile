@@ -1,7 +1,5 @@
-FROM ubuntu
-MAINTAINER nginx
+FROM nginx
+MAINTAINER mitct23
 RUN apt-get update
-RUN apt-get install nginx -y
 EXPOSE 80
-COPY index.html /var/www/html
-CMD nginx -g 'daemon off;'
+COPY index.html /usr/share/html
